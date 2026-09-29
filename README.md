@@ -17,7 +17,7 @@ You need the **Claude desktop app** ([claude.ai/download](https://claude.ai/down
 3. Enter `https://github.com/conversionxl/cxl-personal-os-plugin`, then add **personal-os**.
 4. Make an empty folder, such as `Documents/personal-os`. Open it in the desktop app, in either:
    - the **Code** tab, with **Environment** set to **Local** and the folder picked as **Project folder** (set to Cloud, it only offers repositories), or
-   - **Cowork**.
+   - **Cowork**. Commands work there, but daily logs are not automatic (see below).
 
    Then type `/personal-os:setup`.
 
@@ -40,7 +40,7 @@ In a terminal or VS Code session, in an empty folder:
 | Where | What loads |
 |---|---|
 | Desktop app: Code tab (Environment: Local), terminal, VS Code | Everything |
-| Cowork | Commands, skills, agents and hooks. The automatic daily log also needs the `claude` CLI and `jq` wherever Cowork runs. Anything saved inside `.claude/`, such as memory, is written through the shell, because Cowork's file tools can't write there |
+| Cowork | Commands, skills and agents. **No automatic daily logs:** Cowork runs hooks in its own workspace, where your folder isn't, so run `/personal-os:shutdown` at the end of each day. Memory is written through the shell, because Cowork's file tools can't write inside `.claude/` |
 | claude.ai chat | Skills only |
 | claude.ai/code in a browser, or the Code tab with Environment: Cloud | Nothing. Cloud sessions do not load plugins |
 

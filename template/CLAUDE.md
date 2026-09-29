@@ -95,7 +95,7 @@ They come from the personal-os plugin and run only in this folder (it has `.clau
 |---|---|---|
 | Claude Code (VS Code extension or terminal) | Type `/personal-os:start`, `/personal-os:shutdown`, and so on | Yes |
 | Desktop app: Code tab (Environment: Local) | Type `/personal-os:start`, `/personal-os:shutdown`, and so on | Yes |
-| Cowork | Type `/personal-os:shutdown` and so on | Hooks load, but the daily log needs the `claude` CLI and `jq` where Cowork runs. If `.claude/state/hooks-heartbeat` shows them missing, run `/personal-os:shutdown` at the end of each day |
+| Cowork | Type `/personal-os:shutdown` and so on | No. Cowork runs hooks in its own workspace, where this folder isn't. Read the newest daily logs at the start of a session, and run `/personal-os:shutdown` at the end of each day |
 | claude.ai/code in a browser, or Environment: Cloud | Plugins do not load there | No. Open your GitHub repo and ask for what you need in plain words |
 
 ## GitHub is optional
