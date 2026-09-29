@@ -1,0 +1,31 @@
+# Secrets and machine-local settings: never commit
+.env
+.env.*
+.claude/settings.local.json
+CLAUDE.local.md
+**/CLAUDE.local.md
+
+# Pre-compact snapshots (transient, may contain raw prompt text)
+.claude/state/
+
+# Quarantined daily logs (failed generator output, kept locally for inspection)
+daily-logs/.quarantine/
+
+# Obsidian workspace state and plugin data (plugin data can hold API keys)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/*/data.json
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/styles.css
+
+# OS and editor noise
+.DS_Store
+**/.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Raw data exports usually hold other people's personal data. Keep them local;
+# commit the Markdown you derive from them instead.
+*.csv
+*.xlsx

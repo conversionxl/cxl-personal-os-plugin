@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/context.sh\"", "timeout": 5 },
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/gate.sh\" health.sh", "timeout": 10 },
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/gate.sh\" load-recent-logs.sh", "timeout": 10, "statusMessage": "Loading recent daily logs..." },
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/gate.sh\" catch-up-logs.sh", "timeout": 10, "statusMessage": "Backfilling missing daily logs..." },
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/gate.sh\" restore-state.sh", "timeout": 10 },
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/gate.sh\" lint-due.sh", "timeout": 10, "statusMessage": "Checking vault lint freshness..." },
+          { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/gate.sh\" team-update.sh", "timeout": 10 }
+        ]
+      }
+    ],
+    "PreCompact": [ { "hooks": [ { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/gate.sh\" preserve-state.sh", "timeout": 10 } ] } ],
+    "SessionEnd": [ { "hooks": [ { "type": "command", "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/gate.sh\" auto-shutdown.sh", "timeout": 15 } ] } ]
+  }
+}
