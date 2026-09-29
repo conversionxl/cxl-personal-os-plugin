@@ -47,6 +47,7 @@ Claude has no memory between sessions by default. This repo fixes that with plai
 - **Propose before restructuring.** Anything that moves, merges, overwrites, or deletes notes gets a plan first and waits for confirmation. Append or ask; never silently overwrite.
 - **Cite what you ingested.** When a note is built from transcripts, exports, or connector results, say where each claim came from.
 - **Never invent** statistics, quotes, sources, or case studies. Say when something is unverified.
+- **Write inside `.claude/` with the shell.** Memory, skills and commands live there. In Cowork the file-edit tools cannot write inside `.claude/`, but the shell can once it has started, so use a heredoc. If the shell is not ready, wait and retry. Never save memory anywhere except `.claude/memory/`.
 - **Secrets stay out of git.** API keys and tokens live only in `.claude/settings.local.json` or `.env`, both gitignored. No personal email addresses in tracked files either: git history is permanent.
 
 ---
@@ -94,7 +95,7 @@ They come from the personal-os plugin and run only in this folder (it has `.clau
 |---|---|---|
 | Claude Code (VS Code extension or terminal) | Type `/personal-os:start`, `/personal-os:shutdown`, and so on | Yes |
 | Desktop app: Code tab (Environment: Local) | Type `/personal-os:start`, `/personal-os:shutdown`, and so on | Yes |
-| Cowork | Type `/personal-os:shutdown` and so on | Hooks load, but the daily log needs the `claude` CLI and `jq` where Cowork runs. If `.claude/state/hooks-heartbeat` shows them missing, run `/personal-os:shutdown` at the end of each day |
+| Cowork | Type `/personal-os:shutdown` and so on | No. Cowork runs hooks in its own workspace, where this folder isn't. Read the newest daily logs at the start of a session, and run `/personal-os:shutdown` at the end of each day |
 | claude.ai/code in a browser, or Environment: Cloud | Plugins do not load there | No. Open your GitHub repo and ask for what you need in plain words |
 
 ## GitHub is optional

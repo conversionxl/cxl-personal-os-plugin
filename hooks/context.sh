@@ -1,6 +1,17 @@
 #!/usr/bin/env bash
-# SessionStart: tell the session where the plugin lives, so /personal-os:setup
-# can find its template. One line in folders that are not set up; nothing else.
+# SessionStart: tell the session which plugin version is loaded and where it
+# lives, so /personal-os:setup can find its template. In a folder that is set
+# up, also carry the rule for writing inside .claude/, because CLAUDE.md in
+# folders set up before that rule existed does not have it.
 [ -n "$CC_AUTO_SHUTDOWN" ] && exit 0
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-printf 'personal-os plugin root: `%s`\n' "$ROOT"
+version="$(sed -n 's/.*"version": *"\([^"]*\)".*/\1/p' "$ROOT/.claude-plugin/plugin.json" | head -1)"
+printf 'personal-os plugin %s, root: `%s`\n' "$version" "$ROOT"
+[ -n "$CLAUDE_PROJECT_DIR" ] || exit 0
+dir="$CLAUDE_PROJECT_DIR"
+command -v cygpath >/dev/null 2>&1 && dir="$(cygpath -u "$dir" 2>/dev/null || printf '%s' "$dir")"
+[ -f "$dir/.claude/personal-os.json" ] || exit 0
+cat <<'RULE'
+
+**Writing inside `.claude/`** (memory, your own skills and commands): use the shell, for example a heredoc, not the file-edit tools. In Cowork the file tools cannot write inside `.claude/`, while the shell on the user's computer can once it has started. If the shell is not ready, wait for it and retry. Never save memory anywhere except `.claude/memory/`, and never suggest moving it.
+RULE

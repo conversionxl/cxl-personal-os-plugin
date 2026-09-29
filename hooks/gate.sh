@@ -3,5 +3,11 @@
 # The plugin is installed once per user, so without this gate every hook would
 # fire in every folder you open, writing daily logs into unrelated projects.
 # The marker is .claude/personal-os.json, written by scripts/setup.sh.
-[ -n "$CLAUDE_PROJECT_DIR" ] && [ -f "$CLAUDE_PROJECT_DIR/.claude/personal-os.json" ] || exit 0
+# On Windows CLAUDE_PROJECT_DIR is a C:\ path; test it in Git Bash form, but
+# leave the variable itself alone, because catch-up-logs.sh derives the
+# transcript folder name from the Windows form.
+[ -n "$CLAUDE_PROJECT_DIR" ] || exit 0
+dir="$CLAUDE_PROJECT_DIR"
+command -v cygpath >/dev/null 2>&1 && dir="$(cygpath -u "$dir" 2>/dev/null || printf '%s' "$dir")"
+[ -f "$dir/.claude/personal-os.json" ] || exit 0
 exec bash "$(dirname "${BASH_SOURCE[0]}")/$1"
