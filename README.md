@@ -44,6 +44,10 @@ In a terminal or VS Code session, in an empty folder:
 | claude.ai chat | Skills only |
 | claude.ai/code in a browser, or the Code tab with Environment: Cloud | Nothing. Cloud sessions do not load plugins |
 
+**Windows:** the hooks are bash scripts. Install Git for Windows and jq once: `winget install Git.Git jqlang.jq`, then fully quit and reopen the Claude app. `/personal-os:start` checks both.
+
+**Daily logs begin in your second session.** Setup switches them on, so close the setup session and start a new one in the folder.
+
 ## Commands
 
 | Command | What it does |
