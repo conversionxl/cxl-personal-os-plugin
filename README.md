@@ -6,22 +6,34 @@ Already set up the starter repo? Keep it. Both routes are the same system.
 
 ## Install
 
-**Claude app, Code tab** (recommended)
+Install it **one way only**. Installed twice, every hook runs twice.
 
-1. Make an empty folder, such as `Documents/personal-os`, and open it in the Code tab.
-2. `/plugin marketplace add conversionxl/cxl-personal-os-plugin`
-3. `/plugin install personal-os@cxl-personal-os-plugin`
-4. `/personal-os:setup`
+**From the Claude app settings** (recommended: no typing)
 
-Then switch on auto-update: `/plugin`, Marketplaces, `cxl-personal-os-plugin`. It is off by default for marketplaces outside Anthropic's.
+1. Open **Customize** in the left sidebar. In Cowork, open the Cowork tab first.
+2. Click **Browse plugins**, then **Personal**, then **+**, then **Add marketplace from GitHub**.
+3. Enter `https://github.com/conversionxl/cxl-personal-os-plugin`, then add **personal-os**.
+4. Make an empty folder, such as `Documents/personal-os`. Open it in the Code tab or in Cowork and type `/personal-os:setup`.
 
-**Terminal or VS Code:** the same four steps in any Claude Code session.
+The plugin is saved to your claude.ai account, not your computer, so it follows you to chat, Cowork and Claude Code.
+
+**From Claude Code, if you don't use the Claude app**
+
+In a terminal or VS Code session, in an empty folder:
+
+```
+/plugin marketplace add conversionxl/cxl-personal-os-plugin
+/plugin install personal-os@cxl-personal-os-plugin
+/personal-os:setup
+```
+
+**Installed both ways by accident?** Run `/plugin` in Claude Code. If you see both `personal-os@synced` and `personal-os@cxl-personal-os-plugin`, uninstall the second.
 
 ## Where it works
 
 | Where | What loads |
 |---|---|
-| Claude Code: Code tab, desktop, terminal, VS Code | Everything |
+| Claude Code: Code tab, terminal, VS Code | Everything |
 | Cowork | Commands, skills, agents and hooks. The automatic daily log also needs the `claude` CLI and `jq` wherever Cowork runs |
 | claude.ai chat | Skills only |
 | claude.ai/code online sessions | Nothing. Plugins do not load there |
