@@ -67,7 +67,7 @@ Use wikilinks for projects, people, and frameworks that exist in the repo. No em
 
 ## 6. Update memory
 
-If the session surfaced a durable fact (a preference, a key person, where something lives), save it to `.claude/memory/` and add it to `MEMORY.md`. Skip this if nothing durable came up. Daily detail belongs in the log, not in memory.
+If the session surfaced a durable fact (a preference, a key person, where something lives), save it to `.claude/memory/` and add it to `MEMORY.md`, writing both with the shell (a heredoc), not the file-edit tools: in Cowork the file tools cannot write inside `.claude/`. Skip this if nothing durable came up. Daily detail belongs in the log, not in memory.
 
 ## 7. Offer to sync to GitHub
 

@@ -40,7 +40,7 @@ In a terminal or VS Code session, in an empty folder:
 | Where | What loads |
 |---|---|
 | Desktop app: Code tab (Environment: Local), terminal, VS Code | Everything |
-| Cowork | Commands, skills, agents and hooks. The automatic daily log also needs the `claude` CLI and `jq` wherever Cowork runs |
+| Cowork | Commands, skills, agents and hooks. The automatic daily log also needs the `claude` CLI and `jq` wherever Cowork runs. Anything saved inside `.claude/`, such as memory, is written through the shell, because Cowork's file tools can't write there |
 | claude.ai chat | Skills only |
 | claude.ai/code in a browser, or the Code tab with Environment: Cloud | Nothing. Cloud sessions do not load plugins |
 

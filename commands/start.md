@@ -96,7 +96,7 @@ Then:
 - Fill in the **About me** section of `CLAUDE.md` from answers 1, 2, and 4. Edit only that section.
 - For each project in answer 3, propose a folder name and a one-line scope, as a numbered list. **Wait for confirmation.** Then create `projects/<name>/<name>.md` for each, from `projects/_template.md`, with the frontmatter filled in (`status: active`, a `cadence` they choose, a real `next_action`). Leave sections blank rather than inventing content.
 - If Gmail, Google Calendar, or a project management connector is available in this session, offer to fill in the project files from what those tools show. Base every line on what the tools return, and say where it came from. If no connector is available, say so and skip.
-- Save one memory file for anything durable they said about how they work, and add it to `.claude/memory/MEMORY.md`.
+- Save one memory file for anything durable they said about how they work, and add it to `.claude/memory/MEMORY.md`. Write both with the shell (a heredoc), not the file-edit tools: in Cowork the file tools cannot write inside `.claude/`. If the shell is not ready yet, wait and retry. Never save memory anywhere else.
 
 ## 6. Wrap up
 

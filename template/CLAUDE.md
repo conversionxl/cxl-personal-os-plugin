@@ -47,6 +47,7 @@ Claude has no memory between sessions by default. This repo fixes that with plai
 - **Propose before restructuring.** Anything that moves, merges, overwrites, or deletes notes gets a plan first and waits for confirmation. Append or ask; never silently overwrite.
 - **Cite what you ingested.** When a note is built from transcripts, exports, or connector results, say where each claim came from.
 - **Never invent** statistics, quotes, sources, or case studies. Say when something is unverified.
+- **Write inside `.claude/` with the shell.** Memory, skills and commands live there. In Cowork the file-edit tools cannot write inside `.claude/`, but the shell can once it has started, so use a heredoc. If the shell is not ready, wait and retry. Never save memory anywhere except `.claude/memory/`.
 - **Secrets stay out of git.** API keys and tokens live only in `.claude/settings.local.json` or `.env`, both gitignored. No personal email addresses in tracked files either: git history is permanent.
 
 ---
