@@ -8,16 +8,22 @@ Already set up the starter repo? Keep it. Both routes are the same system.
 
 Install it **one way only**. Installed twice, every hook runs twice.
 
-**From the Claude app settings** (recommended: no typing)
+**From the Claude desktop app settings** (recommended: no typing)
+
+You need the **Claude desktop app** ([claude.ai/download](https://claude.ai/download)). claude.ai in a browser won't work: its Code tab only opens GitHub repositories, in the cloud, and cloud sessions don't load plugins.
 
 1. Open **Customize** in the left sidebar. In Cowork, open the Cowork tab first.
 2. Click **Browse plugins**, then **Personal**, then **+**, then **Add marketplace from GitHub**.
 3. Enter `https://github.com/conversionxl/cxl-personal-os-plugin`, then add **personal-os**.
-4. Make an empty folder, such as `Documents/personal-os`. Open it in the Code tab or in Cowork and type `/personal-os:setup`.
+4. Make an empty folder, such as `Documents/personal-os`. Open it in the desktop app, in either:
+   - the **Code** tab, with **Environment** set to **Local** and the folder picked as **Project folder** (set to Cloud, it only offers repositories), or
+   - **Cowork**.
+
+   Then type `/personal-os:setup`.
 
 The plugin is saved to your claude.ai account, not your computer, so it follows you to chat, Cowork and Claude Code.
 
-**From Claude Code, if you don't use the Claude app**
+**From Claude Code, if you don't use the desktop app**
 
 In a terminal or VS Code session, in an empty folder:
 
@@ -33,10 +39,10 @@ In a terminal or VS Code session, in an empty folder:
 
 | Where | What loads |
 |---|---|
-| Claude Code: Code tab, terminal, VS Code | Everything |
+| Desktop app: Code tab (Environment: Local), terminal, VS Code | Everything |
 | Cowork | Commands, skills, agents and hooks. The automatic daily log also needs the `claude` CLI and `jq` wherever Cowork runs |
 | claude.ai chat | Skills only |
-| claude.ai/code online sessions | Nothing. Plugins do not load there |
+| claude.ai/code in a browser, or the Code tab with Environment: Cloud | Nothing. Cloud sessions do not load plugins |
 
 ## Commands
 
