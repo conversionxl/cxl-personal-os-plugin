@@ -8,22 +8,22 @@ Already set up the starter repo? Keep it. Both routes are the same system.
 
 Install it **one way only**. Installed twice, every hook runs twice.
 
-**From the Claude desktop app settings** (recommended: no typing)
+**From Claude's settings** (recommended: no typing)
 
-You need the **Claude desktop app** ([claude.ai/download](https://claude.ai/download)). claude.ai in a browser won't work: its Code tab only opens GitHub repositories, in the cloud, and cloud sessions don't load plugins.
+Works in claude.ai and the Claude desktop app ([claude.ai/download](https://claude.ai/download)). One exception: Code on claude.ai only runs cloud sessions on a GitHub repository, and cloud sessions don't load plugins. For the Code tab, use the desktop app.
 
 1. Open **Customize** in the left sidebar. In Cowork, open the Cowork tab first.
 2. Click **Browse plugins**, then **Personal**, then **+**, then **Add marketplace from GitHub**.
 3. Enter `https://github.com/conversionxl/cxl-personal-os-plugin`, then add **personal-os**.
-4. Make an empty folder, such as `Documents/personal-os`. Open it in the desktop app, in either:
-   - the **Code** tab, with **Environment** set to **Local** and the folder picked as **Project folder** (set to Cloud, it only offers repositories), or
+4. Make an empty folder, such as `Documents/personal-os`. Open it in either:
+   - the desktop app's **Code** tab, with **Environment** set to **Local** and the folder picked as **Project folder** (set to Cloud, it only offers repositories), or
    - **Cowork**. Commands work there, but daily logs are not automatic (see below).
 
    Then type `/personal-os:setup`.
 
 The plugin is saved to your claude.ai account, not your computer, so it follows you to chat, Cowork and Claude Code.
 
-**From Claude Code, if you don't use the desktop app**
+**From Claude Code in a terminal or VS Code**
 
 In a terminal or VS Code session, in an empty folder:
 
