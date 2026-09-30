@@ -35,6 +35,10 @@ In a terminal or VS Code session, in an empty folder:
 
 **Installed both ways by accident?** Run `/plugin` in Claude Code. If you see both `personal-os@synced` and `personal-os@cxl-personal-os-plugin`, uninstall the second.
 
+## Updating
+
+New versions don't install themselves on a personal marketplace. To update: **Plugins → Add → Manage marketplaces → ⋮** next to the marketplace → **Check for updates**. Your folder, logs and projects are untouched. (Automatic sync needs the Claude GitHub App to have access to the repo; that is not set up.)
+
 ## Where it works
 
 | Where | What loads |
