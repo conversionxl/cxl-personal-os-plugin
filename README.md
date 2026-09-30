@@ -66,11 +66,11 @@ The plugin is installed once for your whole account, so its hooks would otherwis
 
 ## Workshop plugins
 
-The same marketplace lists one plugin per workshop. Add each from **Customize → Browse plugins → Personal → cxl-personal-os-plugin**, then run its setup in your personal OS folder:
+Each workshop has its own plugin in its own marketplace. Add the marketplace once, install the plugin, then run its setup in your personal OS folder:
 
-| Plugin | Setup | Adds |
-|---|---|---|
-| **marketing-brain** | `/marketing-brain:setup` | The brand brain: ICP, positioning and messaging, brand voice. [Details](https://github.com/conversionxl/cxl-marketing-brain#plugin-route) |
+| Plugin | Add this marketplace | Setup | Adds |
+|---|---|---|---|
+| **marketing-brain** | `https://github.com/conversionxl/cxl-marketing-brain` | `/marketing-brain:setup` | The brand brain: ICP, positioning and messaging, brand voice. [Details](https://github.com/conversionxl/cxl-marketing-brain#plugin-route) |
 
 ## Other AI tools
 
