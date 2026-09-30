@@ -64,6 +64,14 @@ In a terminal or VS Code session, in an empty folder:
 
 The plugin is installed once for your whole account, so its hooks would otherwise run in every folder you open. They run only where `/personal-os:setup` has written `.claude/personal-os.json`. Delete that file to switch them off in a folder.
 
+## Workshop plugins
+
+The same marketplace lists one plugin per workshop. Add each from **Customize → Browse plugins → Personal → cxl-personal-os-plugin**, then run its setup in your personal OS folder:
+
+| Plugin | Setup | Adds |
+|---|---|---|
+| **marketing-brain** | `/marketing-brain:setup` | The brand brain: ICP, positioning and messaging, brand voice. [Details](https://github.com/conversionxl/cxl-marketing-brain#plugin-route) |
+
 ## Other AI tools
 
 Setup also writes an `AGENTS.md`. Codex, GitHub Copilot, Cursor and Grok read it, and it points them at `CLAUDE.md` and tells them where the routines are. In Gemini CLI, add `"context": {"fileName": ["AGENTS.md", "GEMINI.md"]}` to `.gemini/settings.json`. Those tools don't run the hooks, so daily logs are by hand there: ask for the shutdown routine at the end of the day. Already set up? Run `/personal-os:setup` again. It adds new files and never overwrites yours.
