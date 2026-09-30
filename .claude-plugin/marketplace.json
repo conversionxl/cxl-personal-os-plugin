@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "cxl-personal-os-plugin",
+  "name": "cxl-personal-os-plugins",
   "description": "CXL's personal OS plugin for the AI Native Marketer cohort.",
   "owner": {
     "name": "CXL",

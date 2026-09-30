@@ -14,7 +14,7 @@ Works in claude.ai and the Claude desktop app ([claude.ai/download](https://clau
 
 1. Open **Customize** in the left sidebar. In Cowork, open the Cowork tab first.
 2. Click **Browse plugins**, then **Personal**, then **+**, then **Add marketplace from GitHub**.
-3. Enter `https://github.com/conversionxl/cxl-personal-os-plugin`, then add **personal-os**.
+3. Enter `https://github.com/conversionxl/cxl-personal-os-plugins`, then add **personal-os**.
 4. Make an empty folder, such as `Documents/personal-os`. Open it in either:
    - the desktop app's **Code** tab, with **Environment** set to **Local** and the folder picked as **Project folder** (set to Cloud, it only offers repositories), or
    - **Cowork**. Commands work there, but daily logs are not automatic (see below).
@@ -28,12 +28,12 @@ The plugin is saved to your claude.ai account, not your computer, so it follows 
 In a terminal or VS Code session, in an empty folder:
 
 ```
-/plugin marketplace add conversionxl/cxl-personal-os-plugin
-/plugin install personal-os@cxl-personal-os-plugin
+/plugin marketplace add conversionxl/cxl-personal-os-plugins
+/plugin install personal-os@cxl-personal-os-plugins
 /personal-os:setup
 ```
 
-**Installed both ways by accident?** Run `/plugin` in Claude Code. If you see both `personal-os@synced` and `personal-os@cxl-personal-os-plugin`, uninstall the second.
+**Installed both ways by accident?** Run `/plugin` in Claude Code. If you see both `personal-os@synced` and `personal-os@cxl-personal-os-plugins`, uninstall the second.
 
 ## Updating
 
