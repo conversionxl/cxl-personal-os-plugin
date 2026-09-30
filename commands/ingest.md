@@ -22,7 +22,7 @@ Process the `raw/` folder: messy notes, call transcripts, voice memo text, paste
 
 ## Steps
 
-1. **Read everything in `raw/`** (skip `raw/README.md`). List each item with a one-line summary of what it is.
+1. **Read everything in `raw/`** (skip `raw/README.md`, and skip `raw/voc/` and `raw/brand/` entirely if they exist: those are Marketing Brain inputs that stay where they are). List each item with a one-line summary of what it is.
 2. **Make sense of each item.** What is it about? Is it a task, an idea, a decision, reference material, draft content, or project input? Search the repo for an existing home before deciding.
 3. **Choose an action for each:**
    - **Merge** into an existing note (add a task to a project's open tasks, a step to a framework). Prefer this when a clear home exists.
