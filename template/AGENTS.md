@@ -21,3 +21,7 @@ and follow it step by step. Treat `$ARGUMENTS` as whatever the user added after 
 
 - Skills are in `.claude/skills/<name>/SKILL.md`. When a task matches a skill's description, read it and follow it.
 - Standing facts are in `.claude/memory/`, indexed by `MEMORY.md`. Add a file there when the owner tells you something that stays true, and add one line to the index.
+
+## Brand brain
+
+**Brand brain.** If `wiki/brand/` exists, it is this folder's tone of voice, messaging and positioning documentation. Read it before writing anything customer-facing: `icp.md` for who, `positioning-messaging.md` for what to say, `voice-guide.md` and `vocabulary.md` for how to say it. It outranks any other voice or style note in this folder.

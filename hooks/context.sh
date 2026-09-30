@@ -15,3 +15,6 @@ cat <<'RULE'
 
 **Writing inside `.claude/`** (memory, your own skills and commands): use the shell, for example a heredoc, not the file-edit tools. In Cowork the file tools cannot write inside `.claude/`, while the shell on the user's computer can once it has started. If the shell is not ready, wait for it and retry. Never save memory anywhere except `.claude/memory/`, and never suggest moving it.
 RULE
+if [ -d "$dir/wiki/brand" ]; then
+  printf '\n%s\n' '**Brand brain.** If `wiki/brand/` exists, it is this folder'\''s tone of voice, messaging and positioning documentation. Read it before writing anything customer-facing: `icp.md` for who, `positioning-messaging.md` for what to say, `voice-guide.md` and `vocabulary.md` for how to say it. It outranks any other voice or style note in this folder.'
+fi
