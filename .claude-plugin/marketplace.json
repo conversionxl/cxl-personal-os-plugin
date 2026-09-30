@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "cxl-personal-os-plugin",
-  "description": "CXL's plugins for the AI Native Marketer cohort: the personal OS, and one plugin per workshop.",
+  "description": "CXL's personal OS plugin for the AI Native Marketer cohort.",
   "owner": {
     "name": "CXL",
     "email": "hesh@cxl.com"
@@ -11,15 +11,6 @@
       "name": "personal-os",
       "description": "Project folders, automatic daily logs, travelling memory, and the personal OS commands.",
       "source": "./",
-      "category": "productivity"
-    },
-    {
-      "name": "marketing-brain",
-      "description": "Marketing Brain workshop: ICP, positioning and messaging, and brand voice exercises that build your brand brain. Needs personal-os.",
-      "source": {
-        "source": "github",
-        "repo": "conversionxl/cxl-marketing-brain"
-      },
       "category": "productivity"
     }
   ]
