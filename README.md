@@ -23,9 +23,9 @@ Works in claude.ai and the Claude desktop app ([claude.ai/download](https://clau
 
 The plugin is saved to your claude.ai account, not your computer, so it follows you to chat, Cowork and Claude Code.
 
-**From Claude Code in a terminal or VS Code**
+**From Claude Code in VS Code (or a terminal)**
 
-In a terminal or VS Code session, in an empty folder:
+Open an empty folder and type these in the Claude chat, one at a time:
 
 ```
 /plugin marketplace add conversionxl/cxl-personal-os-plugins
@@ -48,7 +48,7 @@ New versions don't install themselves on a personal marketplace. To update: **Pl
 | claude.ai chat | Skills only |
 | claude.ai/code in a browser, or the Code tab with Environment: Cloud | Nothing. Cloud sessions do not load plugins |
 
-**Windows:** the hooks are bash scripts. Install Git for Windows and jq once: `winget install Git.Git jqlang.jq`, then fully quit and reopen the Claude app. `/personal-os:start` checks both.
+**Windows:** the hooks are bash scripts, so they need Git for Windows and jq. `/personal-os:start` checks both and installs them with your OK. Then fully quit and reopen the Claude app.
 
 **Daily logs begin in your second session.** Setup switches them on, so close the setup session and start a new one in the folder.
 
